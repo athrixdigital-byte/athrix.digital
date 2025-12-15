@@ -153,6 +153,40 @@
         font-size: 38px;
       }
     }
+  /* ================= CONTACT FORM ================= */
+
+.contact-form {
+  max-width: 520px;
+  margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  background: #0f0f0f;
+  border: 1px solid #222;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
+}
+
+.contact-form button {
+  background: #d4af37;
+  color: #000;
+  padding: 14px 36px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
   </style>
 </head>
 
@@ -218,17 +252,29 @@
     </section>
 
     <!-- CONTACT -->
-    <section>
-      <h2>Contact</h2>
-      <p class="trust">
-        Have a project in mind or need a reliable digital partner?
-      </p>
-      <p>
-        <strong>Email:</strong><br />
-        <a href="mailto:info@athrix.digital">info@athrix.digital</a>
-      </p>
-      <p class="trust">We usually respond within 24 hours.</p>
-    </section>
+<section>
+  <h2>Start a Project</h2>
+
+  <p class="trust">
+    Tell us a little about your project.  
+    We review every inquiry and respond within 24 hours.
+  </p>
+
+  <form action="https://formspree.io/f/xbjvvlkk" method="POST" class="contact-form">
+
+    <input type="text" name="name" placeholder="Your name" required />
+
+    <input type="email" name="email" placeholder="Work email" required />
+
+    <input type="text" name="company" placeholder="Company / Brand (optional)" />
+
+    <textarea name="message" rows="5" placeholder="Briefly describe your project"></textarea>
+
+    <button type="submit">Submit Inquiry</button>
+
+  </form>
+</section>
+
 
     <!-- FOOTER -->
     <footer>
