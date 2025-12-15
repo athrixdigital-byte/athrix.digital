@@ -1,199 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ATHRIX DIGITAL</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ATHRIX DIGITAL builds precision-engineered digital systems for modern brands.">
+  <meta charset="UTF-8" />
+  <title>ATHRIX DIGITAL — Precision Digital Systems</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ATHRIX DIGITAL builds precision-engineered digital systems for founders, startups, and global brands." />
 
   <style>
+    /* ================= BASE ================= */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Inter, Helvetica, Arial, sans-serif;
       background-color: #000;
-      color: #fff;
+      color: #ffffff;
       line-height: 1.6;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      position: absolute;
+      top: 28px;
+      left: 40px;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 52px;
+      width: auto;
+    }
+
+    /* ================= LAYOUT ================= */
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 120px 20px 80px;
+      padding: 80px 20px;
     }
 
-    h1 {
+    /* ================= HERO ================= */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .hero h1 {
       font-size: 48px;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       margin-bottom: 16px;
     }
 
-    h2 {
-      color: #d4af37;
-      margin-top: 80px;
+    .hero p {
+      font-size: 18px;
+      color: #d0d0d0;
+      max-width: 560px;
+      margin-bottom: 32px;
     }
 
-    p {
-      font-size: 18px;
-      color: #ddd;
-      max-width: 600px;
+    .cta {
+      display: inline-block;
+      background: #d4af37;
+      color: #000;
+      padding: 14px 36px;
+      font-weight: 600;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .hero video {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 14px;
+      display: block;
+      background: #111;
+    }
+
+    /* ================= SECTIONS ================= */
+    section {
+      margin-top: 100px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #d4af37;
     }
 
     ul {
       list-style: none;
       padding: 0;
-      margin-top: 20px;
+      max-width: 720px;
     }
 
     ul li {
-      margin: 14px 0;
+      margin-bottom: 18px;
       font-size: 18px;
+      color: #e0e0e0;
     }
 
-    /* ===== HEADER & LOGO ===== */
-    .site-header {
-      position: absolute;
-      top: 32px;
-      left: 40px;
-      z-index: 1000;
+    ul li strong {
+      color: #ffffff;
     }
 
-    .logo {
-      height: 56px;
-      width: auto;
-      display: block;
+    /* ================= TRUST ================= */
+    .trust {
+      max-width: 700px;
+      color: #cfcfcf;
     }
 
-    /* ===== HERO SECTION ===== */
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: center;
-      gap: 60px;
-      min-height: 90vh;
+    /* ================= FOOTER ================= */
+    footer {
+      margin-top: 140px;
+      padding-top: 40px;
+      border-top: 1px solid #222;
+      font-size: 14px;
+      color: #888;
     }
 
-    .hero-left p {
-      margin-bottom: 30px;
-    }
-
-    .cta-btn {
-      background: #d4af37;
-      color: #000;
-      padding: 14px 32px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-      display: inline-block;
-    }
-
-    .hero-right video {
-      width: 100%;
-      max-width: 480px;
-      border-radius: 14px;
-      opacity: 0.9;
-    }
-
-    /* ===== MOBILE FIX ===== */
+    /* ================= MOBILE ================= */
     @media (max-width: 768px) {
-      .site-header {
-        top: 20px;
+      header {
         left: 50%;
         transform: translateX(-50%);
       }
 
-      .logo {
+      header img {
         height: 44px;
       }
 
       .hero {
         grid-template-columns: 1fr;
-        min-height: auto;
+        margin-top: 20px;
       }
 
-      .hero-right {
+      .hero video {
         margin-top: 40px;
       }
-    }
 
-    footer {
-      margin-top: 120px;
-      font-size: 14px;
-      color: #888;
+      h1 {
+        font-size: 38px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header class="site-header">
-  <img src="logo.png" alt="ATHRIX DIGITAL Logo" class="logo">
-</header>
+  <!-- HEADER -->
+  <header>
+    <img src="logo.png" alt="ATHRIX DIGITAL logo" />
+  </header>
 
-<div class="container">
+  <div class="container">
 
-  <!-- HERO -->
-  <section class="hero">
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>ATHRIX DIGITAL</h1>
+        <p>
+          We design and build precision-engineered digital systems for founders,
+          startups, and modern brands that value performance, clarity, and long-term growth.
+        </p>
 
-    <div class="hero-left">
-      <h1>ATHRIX DIGITAL</h1>
+        <a class="cta" href="mailto:info@athrix.digital">
+          Start a Project
+        </a>
+      </div>
 
-      <p>
-        Precision-engineered digital systems for founders, startups,
-        and modern brands who care about performance, clarity, and scale.
+      <div>
+        <video autoplay muted loop playsinline>
+          <source src="abstract-tech.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section>
+      <h2>What We Do</h2>
+      <ul>
+        <li><strong>AI Automation & Workflow Systems</strong> — intelligent systems that reduce manual work and scale operations.</li>
+        <li><strong>Webflow & No-Code Development</strong> — fast, secure, conversion-ready websites.</li>
+        <li><strong>Landing Page Engineering</strong> — pages designed to turn attention into revenue.</li>
+        <li><strong>SEO Content Systems</strong> — structured content built for long-term visibility.</li>
+        <li><strong>Short-Form Creative Systems</strong> — modern content for high-attention platforms.</li>
+      </ul>
+    </section>
+
+    <!-- WHO -->
+    <section>
+      <h2>Who We Work With</h2>
+      <p class="trust">
+        We partner with early-stage startups, SaaS companies, DTC brands,
+        founders, and agencies across the US, UK, Europe, and global markets.
       </p>
+    </section>
 
-      <a class="cta-btn" href="mailto:hello@athrix.digital">
-        Start a Project
-      </a>
-    </div>
+    <!-- WHY -->
+    <section>
+      <h2>Why ATHRIX DIGITAL</h2>
+      <p class="trust">
+        We don’t chase trends or quick wins.  
+        We focus on building clear, reliable digital systems that perform
+        consistently and scale with your business.
+      </p>
+    </section>
 
-    <div class="hero-right">
-      <video autoplay loop muted playsinline>
-        <source src="abstract-tech.mp4" type="video/mp4">
-      </video>
-    </div>
+    <!-- CONTACT -->
+    <section>
+      <h2>Contact</h2>
+      <p class="trust">
+        Have a project in mind or need a reliable digital partner?
+      </p>
+      <p>
+        <strong>Email:</strong><br />
+        <a href="mailto:info@athrix.digital">info@athrix.digital</a>
+      </p>
+      <p class="trust">We usually respond within 24 hours.</p>
+    </section>
 
-  </section>
+    <!-- FOOTER -->
+    <footer>
+      © 2025 ATHRIX DIGITAL — athrix.digital
+    </footer>
 
-  <!-- SERVICES -->
-  <h2>What We Do</h2>
-  <ul>
-    <li><strong>AI Automation & Workflow Systems</strong><br>Smart automation that scales operations.</li>
-    <li><strong>Webflow Website Development</strong><br>Fast, secure, growth-ready websites.</li>
-    <li><strong>Conversion-Focused Landing Pages</strong><br>Designed to turn visitors into customers.</li>
-    <li><strong>SEO-Ready Content Systems</strong><br>Structured for long-term organic growth.</li>
-    <li><strong>Short-Form Creative</strong><br>High-impact content for modern platforms.</li>
-  </ul>
-
-  <!-- CLIENTS -->
-  <h2>Who We Work With</h2>
-  <p>
-    We partner with founders, startups, SaaS companies,
-    DTC brands, and agencies worldwide.
-  </p>
-
-  <!-- WHY -->
-  <h2>Why ATHRIX DIGITAL</h2>
-  <p>
-    We don’t chase trends or shortcuts.
-    We build reliable digital systems with clear communication
-    and long-term performance in mind.
-  </p>
-
-  <!-- CONTACT -->
-  <h2>Contact</h2>
-  <p>Have a project in mind? Let’s talk.</p>
-  <p>
-    <strong>Email:</strong><br>
-    <a href="mailto:info@athrix.digital">info@athrix.digital</a>
-  </p>
-  <p>We usually respond within 24 hours.</p>
-
-  <footer>
-    © 2025 ATHRIX DIGITAL — athrix.digital
-  </footer>
-
-</div>
+  </div>
 
 </body>
 </html>
