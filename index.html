@@ -71,17 +71,7 @@
   color: #ccc;
   line-height: 1.6;
 }
-.site-header {
-  position: absolute;
-  top: 60px;
-  left: 80px;
-}
-
-.logo {
-  height: 52px;
-  width: auto;
-}
-/* ===== LOGO FIX (DESKTOP + MOBILE) ===== */
+/* ===== HEADER & LOGO (FINAL CLEAN VERSION) ===== */
 
 .site-header {
   position: absolute;
@@ -91,16 +81,21 @@
 }
 
 .logo {
-  height: 40px;
+  height: 56px;   /* Laptop / Desktop */
   width: auto;
+  display: block;
 }
 
-/* Mobile fix */
+/* ===== MOBILE FIX ===== */
 @media (max-width: 768px) {
   .site-header {
     top: 20px;
-    left: 20px;
-    transform: none;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logo {
+    height: 44px; /* Mobile size */
   }
 }
 
