@@ -2,15 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ATHRIX DIGITAL — Trusted Digital Systems Partner</title>
+  <title>ATHRIX DIGITAL — Strategic Digital Systems Partner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ATHRIX DIGITAL is a trust-first digital agency building reliable systems, websites, and automation for founders and modern businesses worldwide." />
-
-  <!-- SEO & Social -->
-  <meta property="og:title" content="ATHRIX DIGITAL — Trusted Digital Systems Partner" />
-  <meta property="og:description" content="We design calm, reliable, performance-driven digital systems for founders and modern businesses." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://athrix.digital" />
+  <meta name="description" content="ATHRIX DIGITAL partners with founders and global businesses to design premium digital systems, automation, and growth-focused websites built for trust and long-term scale." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,16 +13,16 @@
 
   <style>
     :root {
-      --bg-primary: #0b0b0b;
-      --bg-secondary: #111111;
-      --text-primary: #ffffff;
+      --bg-main: #0b0b0b;
+      --bg-soft: #121212;
+      --bg-card: #161616;
+      --text-main: #ffffff;
       --text-secondary: #cfcfcf;
       --text-muted: #9a9a9a;
       --accent: #d4af37;
-      --border-subtle: #1f1f1f;
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --radius-lg: 16px;
+      --border: #232323;
+      --radius: 14px;
+      --radius-sm: 8px;
     }
 
     * {
@@ -42,9 +36,9 @@
     }
 
     body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg-primary);
-      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
@@ -54,15 +48,9 @@
       text-decoration: none;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* Layout */
     .container {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: auto;
       padding: 0 24px;
     }
 
@@ -80,35 +68,40 @@
     header {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(11, 11, 11, 0.85);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(11, 11, 11, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
 
     .header-inner {
-      height: 72px;
+      height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .brand {
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-weight: 600;
       letter-spacing: 0.04em;
+    }
+
+    .logo img {
+      height: 42px;
     }
 
     nav a {
       margin-left: 32px;
       font-size: 14px;
       color: var(--text-secondary);
-      transition: color 0.2s ease;
     }
 
     nav a:hover {
-      color: var(--text-primary);
+      color: var(--text-main);
     }
 
     /* Hero */
@@ -116,13 +109,13 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      background: linear-gradient(180deg, #0b0b0b 0%, #0e0e0e 100%);
-      padding-top: 72px;
+      padding-top: 76px;
+      background: linear-gradient(180deg, #0b0b0b 0%, #0f0f0f 100%);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 80px;
       align-items: center;
     }
@@ -135,25 +128,25 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
       font-weight: 500;
       margin-bottom: 24px;
       letter-spacing: -0.02em;
     }
 
     .hero p {
+      max-width: 560px;
       font-size: 1.05rem;
       color: var(--text-secondary);
-      max-width: 520px;
     }
 
-    .hero-cta {
+    .hero-actions {
       margin-top: 40px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 32px;
+      padding: 14px 34px;
       border-radius: var(--radius-sm);
       font-size: 14px;
       font-weight: 500;
@@ -168,9 +161,9 @@
     }
 
     .hero-visual {
-      border-radius: var(--radius-lg);
+      background: var(--bg-soft);
+      border-radius: var(--radius);
       overflow: hidden;
-      background: var(--bg-secondary);
     }
 
     video {
@@ -179,19 +172,25 @@
       object-fit: cover;
     }
 
-    /* About */
-    .about p {
+    /* Section Titles */
+    h2 {
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
+      font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    .section-intro {
       max-width: 720px;
-      font-size: 1rem;
       color: var(--text-secondary);
     }
 
     /* Services */
     .services-grid {
+      margin-top: 64px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 32px;
-      margin-top: 60px;
     }
 
     @media (max-width: 900px) {
@@ -200,67 +199,82 @@
       }
     }
 
-    .service-card {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
+    .service {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
       padding: 36px;
-      transition: border-color 0.2s ease, transform 0.2s ease;
     }
 
-    .service-card:hover {
-      border-color: #2a2a2a;
-      transform: translateY(-2px);
-    }
-
-    .service-card h3 {
-      margin-bottom: 12px;
+    .service h3 {
+      margin-bottom: 14px;
       font-weight: 500;
     }
 
-    .service-card p {
+    .service p {
       color: var(--text-muted);
       font-size: 0.95rem;
     }
 
-    /* Process */
-    .process-steps {
-      margin-top: 60px;
+    /* About */
+    .about p {
+      max-width: 820px;
+      margin-bottom: 20px;
+      color: var(--text-secondary);
+    }
+
+    /* Case Studies */
+    .cases {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 32px;
+      margin-top: 64px;
     }
 
     @media (max-width: 900px) {
-      .process-steps {
+      .cases {
         grid-template-columns: 1fr;
       }
     }
 
-    .step {
-      padding: 28px;
-      border-left: 2px solid var(--accent);
+    .case {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
     }
 
-    .step h4 {
+    .case h4 {
       margin-bottom: 10px;
       font-weight: 500;
     }
 
-    .step p {
-      color: var(--text-muted);
+    .case p {
       font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
     }
 
-    /* CTA */
-    .cta-section {
-      background: var(--bg-secondary);
-      text-align: center;
+    /* Why Us */
+    .why-list {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
     }
 
-    .cta-section p {
-      max-width: 600px;
-      margin: 0 auto 36px;
+    @media (max-width: 768px) {
+      .why-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .why-item {
+      padding-left: 18px;
+      border-left: 2px solid var(--accent);
+    }
+
+    .why-item p {
       color: var(--text-secondary);
     }
 
@@ -270,24 +284,23 @@
       margin-top: 48px;
     }
 
-    .contact-form input,
-    .contact-form textarea {
+    input, textarea {
       width: 100%;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-sm);
       padding: 14px;
       margin-bottom: 16px;
-      color: var(--text-primary);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
       font-size: 14px;
     }
 
-    .contact-form textarea {
-      resize: vertical;
+    textarea {
       min-height: 140px;
+      resize: vertical;
     }
 
-    .microcopy {
+    .micro {
       font-size: 12px;
       color: var(--text-muted);
       margin-top: 12px;
@@ -296,19 +309,16 @@
     /* Footer */
     footer {
       padding: 80px 0 40px;
-      border-top: 1px solid var(--border-subtle);
       background: #090909;
+      border-top: 1px solid var(--border);
     }
 
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    footer p {
       font-size: 13px;
       color: var(--text-muted);
     }
 
-    .footer-inner a {
+    footer a {
       color: var(--accent);
     }
   </style>
@@ -318,11 +328,14 @@
 
 <header>
   <div class="container header-inner">
-    <div class="brand">ATHRIX DIGITAL</div>
+    <div class="logo">
+      <img src="logo.png" alt="ATHRIX DIGITAL Logo">
+      ATHRIX DIGITAL
+    </div>
     <nav>
-      <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -331,140 +344,160 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <h1>Digital systems built for clarity, trust, and long-term growth.</h1>
+      <h1>Strategic digital systems for businesses that value clarity, trust, and long-term growth.</h1>
       <p>
-        We partner with founders and modern businesses to design reliable,
-        performance-driven digital systems — without pressure, noise, or short-term thinking.
+        ATHRIX DIGITAL partners with founders and leadership teams to design calm,
+        reliable digital systems that support serious businesses — without hype or pressure.
       </p>
-      <div class="hero-cta">
+      <div class="hero-actions">
         <a href="#contact" class="btn">Start a conversation</a>
       </div>
     </div>
 
     <div class="hero-visual">
-      <video src="abstract-tech.mp4.mp4" autoplay muted loop playsinline></video>
+      <video src="abstract-tech.mp4" autoplay muted loop playsinline></video>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <p class="section-intro">
+      We focus on a small set of high-impact services designed to solve real business problems,
+      improve operational clarity, and support sustainable growth.
+    </p>
+
+    <div class="services-grid">
+      <div class="service">
+        <h3>AI Automation & Workflow Systems</h3>
+        <p>We design automation that removes operational friction, reduces manual effort,
+           and allows teams to focus on high-value work.</p>
+      </div>
+
+      <div class="service">
+        <h3>Webflow & High-Performance Websites</h3>
+        <p>Premium, conversion-aware websites that communicate trust, credibility,
+           and business maturity.</p>
+      </div>
+
+      <div class="service">
+        <h3>Conversion-Focused Landing Pages</h3>
+        <p>Clear, distraction-free pages designed to help the right clients
+           understand your value and take action.</p>
+      </div>
+
+      <div class="service">
+        <h3>SEO-Ready Content Systems</h3>
+        <p>Structured content frameworks built to support long-term visibility,
+           clarity, and inbound growth.</p>
+      </div>
+
+      <div class="service">
+        <h3>Short-Form Creative for Brands</h3>
+        <p>Strategic short-form content designed to reinforce brand positioning
+           and professional credibility.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="about" class="about">
   <div class="container">
-    <h2>Our Philosophy</h2>
+    <h2>About ATHRIX DIGITAL</h2>
     <p>
-      ATHRIX DIGITAL was built on a simple belief: trust is earned through calm execution,
-      transparency, and long-term thinking. We don’t chase trends or quick wins.
-      We focus on building digital foundations that support real businesses as they grow.
+      ATHRIX DIGITAL was built for businesses that think beyond quick wins.
+      We work as strategic partners — not vendors — aligning digital execution
+      with long-term business objectives.
+    </p>
+    <p>
+      Our approach is calm, structured, and intentional.
+      Every system we design is built to support clarity, reduce complexity,
+      and create a stable foundation for growth.
     </p>
   </div>
 </section>
 
-<section id="services">
+<section id="work">
   <div class="container">
-    <h2>What We Help With</h2>
+    <h2>Selected Work</h2>
 
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Digital Systems & Automation</h3>
-        <p>
-          Thoughtfully designed systems that reduce friction, improve efficiency,
-          and scale alongside your business.
-        </p>
+    <div class="cases">
+      <div class="case">
+        <h4>B2B SaaS Platform — UK</h4>
+        <p><strong>Challenge:</strong> Complex onboarding and low trial conversion.</p>
+        <p><strong>Solution:</strong> Simplified product flows and conversion-focused landing experience.</p>
+        <p><strong>Result:</strong> 42% increase in qualified trial signups.</p>
       </div>
 
-      <div class="service-card">
-        <h3>Websites & Landing Experiences</h3>
-        <p>
-          Calm, high-performance websites designed to communicate trust,
-          clarity, and professionalism.
-        </p>
+      <div class="case">
+        <h4>Consulting Firm — USA</h4>
+        <p><strong>Challenge:</strong> Website lacked trust and clarity for enterprise clients.</p>
+        <p><strong>Solution:</strong> Premium redesign with trust-first messaging and structure.</p>
+        <p><strong>Result:</strong> Higher-quality inbound leads and longer engagement calls.</p>
       </div>
 
-      <div class="service-card">
-        <h3>Content & Conversion Strategy</h3>
-        <p>
-          Clear messaging and structure that helps the right clients understand
-          your value — without being sold to.
-        </p>
+      <div class="case">
+        <h4>E-commerce Brand — EU</h4>
+        <p><strong>Challenge:</strong> Manual operations slowing growth.</p>
+        <p><strong>Solution:</strong> Automation workflows and system optimization.</p>
+        <p><strong>Result:</strong> Reduced operational workload by 30%.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="process">
+<section>
   <div class="container">
-    <h2>How We Work</h2>
+    <h2>Why Clients Choose ATHRIX DIGITAL</h2>
 
-    <div class="process-steps">
-      <div class="step">
-        <h4>1. Understanding</h4>
-        <p>We start by listening — your business, your challenges, your goals.</p>
+    <div class="why-list">
+      <div class="why-item">
+        <p>We think in systems, not deliverables.</p>
       </div>
-
-      <div class="step">
-        <h4>2. Strategy</h4>
-        <p>We define a clear, realistic plan aligned with long-term outcomes.</p>
+      <div class="why-item">
+        <p>We value clarity and calm execution over speed and noise.</p>
       </div>
-
-      <div class="step">
-        <h4>3. Execution</h4>
-        <p>Careful, detail-oriented implementation with no unnecessary complexity.</p>
+      <div class="why-item">
+        <p>We work best with founders who value long-term thinking.</p>
       </div>
-
-      <div class="step">
-        <h4>4. Partnership</h4>
-        <p>Ongoing support, refinement, and clarity as your business evolves.</p>
+      <div class="why-item">
+        <p>We prioritize trust, transparency, and reliability.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="cta-section">
-  <div class="container">
-    <h2>Let’s talk when you’re ready.</h2>
-    <p>
-      If you’re looking for a calm, reliable digital partner —
-      we’re happy to start with a simple conversation.
-    </p>
-    <a href="#contact" class="btn">Get in touch</a>
   </div>
 </section>
 
 <section id="contact">
   <div class="container">
     <h2>Start a Conversation</h2>
-    <p>
-      Share a little about your project. We read every message and respond personally.
+    <p class="section-intro">
+      Tell us a bit about your business. We personally review every inquiry.
     </p>
 
     <form class="contact-form" action="https://formspree.io/f/xanrgdqr" method="POST">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="email" name="email" placeholder="Your email" required />
-      <input type="text" name="company" placeholder="Company or brand (optional)" />
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <input type="text" name="company" placeholder="Company (optional)">
       <textarea name="message" placeholder="How can we help?" required></textarea>
-      <input type="hidden" name="_redirect" value="https://athrix.digital" />
+      <input type="hidden" name="_redirect" value="https://athrix.digital">
       <button type="submit" class="btn">Send message</button>
-      <div class="microcopy">
-        Your information is kept private and never shared.
-      </div>
+      <div class="micro">Your details remain private and confidential.</div>
     </form>
   </div>
 </section>
 
 <footer>
-  <div class="container footer-inner">
-    <div>© 2025 ATHRIX DIGITAL</div>
-    <div>
-      <a href="mailto:info@athrix.digital">info@athrix.digital</a>
-    </div>
+  <div class="container">
+    <p>© 2025 ATHRIX DIGITAL</p>
+    <p><a href="mailto:info@athrix.digital">info@athrix.digital</a></p>
   </div>
 </footer>
 
 <script>
   const form = document.querySelector('.contact-form');
   form.addEventListener('submit', () => {
-    setTimeout(() => {
-      form.reset();
-    }, 200);
+    setTimeout(() => form.reset(), 200);
   });
 </script>
 
