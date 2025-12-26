@@ -318,43 +318,65 @@
     <p class="section-intro">Focused services built to deliver trust, clarity, and measurable business outcomes.</p>
 
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">01</div>
-        <h3>AI Automation & Workflows</h3>
-        <p>Reducing operational friction through intelligent automation.</p>
-        <button onclick="openVideo('https://www.youtube.com/embed/xV-bOHvfbPQ')">How it works</button>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">02</div>
-        <h3>High-Performance Websites</h3>
-        <p>Trust-driven websites built for authority and conversion.</p>
-        <button onclick="openVideo('https://www.youtube.com/embed/P_mJb3ngflo')">How it works</button>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">03</div>
+     <div class="service-card featured-service">
+    <div class="service-icon">03</div>
         <h3>Conversion-Focused Landing Pages</h3>
         <p>Clear, distraction-free decision environments.</p>
         <button onclick="openVideo('https://www.youtube.com/embed/hcPxMuxh5Tc')">How it works</button>
       </div>
 
-      <div class="service-card">
-        <div class="service-icon">04</div>
-        <h3>SEO-Ready Content Systems</h3>
-        <p>Structured content for sustainable inbound growth.</p>
-        <button onclick="openVideo('https://www.youtube.com/embed/MYE6T_gd7H0')">How it works</button>
-      </div>
+      <!-- SECONDARY SERVICES WRAPPER (ADDED) -->
+<div class="secondary-services" id="secondaryServices">
 
-      <div class="service-card">
-        <div class="service-icon">05</div>
-        <h3>Short-Form Brand Creatives</h3>
-        <p>Premium creative aligned with strategic positioning.</p>
-        <button onclick="openVideo('https://www.youtube.com/embed/HBHVQ1HFhRk')">How it works</button>
-      </div>
-    </div>
+  <div class="service-card">
+    <div class="service-icon">02</div>
+    <h3>High-Performance Websites</h3>
+    <p>Trust-driven websites built for authority and conversion.</p>
+    <button onclick="openVideo('https://www.youtube.com/embed/P_mJb3ngflo')">
+      How it works
+    </button>
   </div>
+
+  <div class="service-card">
+    <div class="service-icon">01</div>
+    <h3>AI Automation & Workflows</h3>
+    <p>Reducing operational friction through intelligent automation.</p>
+    <button onclick="openVideo('https://www.youtube.com/embed/xV-bOHvfbPQ')">
+      How it works
+    </button>
+  </div>
+
+  <div class="service-card">
+    <div class="service-icon">04</div>
+    <h3>SEO-Ready Content Systems</h3>
+    <p>Structured content for sustainable inbound growth.</p>
+    <button onclick="openVideo('https://www.youtube.com/embed/MYE6T_gd7H0')">
+      How it works
+    </button>
+  </div>
+
+  <div class="service-card">
+    <div class="service-icon">05</div>
+    <h3>Short-Form Brand Creatives</h3>
+    <p>Premium creative aligned with strategic positioning.</p>
+    <button onclick="openVideo('https://www.youtube.com/embed/HBHVQ1HFhRk')">
+      How it works
+    </button>
+  </div>
+
+</div>
+<!-- END SECONDARY SERVICES -->
+
 </section>
+.secondary-services{
+  display:none;
+  margin-top:28px;
+}
+
+.featured-service{
+  border:1px solid var(--brand);
+  box-shadow:0 0 0 1px rgba(212,175,55,.15);
+}
 
 <section id="work">
   <div class="container">
@@ -467,6 +489,15 @@
       }]
     }
   });
+  // ADDED — toggle secondary services
+function toggleServices(){
+  const box = document.getElementById('secondaryServices');
+  box.style.display =
+    box.style.display === 'none' || box.style.display === ''
+      ? 'grid'
+      : 'none';
+}
+
 </script>
 
 </body>
